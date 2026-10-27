@@ -1,5 +1,6 @@
 package com.vanlang.kiemtra
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -47,6 +48,11 @@ class LoginActivity : AppCompatActivity() {
         } else {
             tvStatus.setTextColor(Color.parseColor("#2E7D32"))
             tvStatus.text = getString(R.string.validation_success)
+
+            // Explicit Intent: chuyển sang ProfileActivity, gửi kèm email qua putExtra()
+            val intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra(ProfileActivity.EXTRA_EMAIL, email)
+            startActivity(intent)
         }
     }
 }
