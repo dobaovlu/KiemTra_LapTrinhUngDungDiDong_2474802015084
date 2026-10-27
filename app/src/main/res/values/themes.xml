@@ -1,0 +1,8 @@
+<resources>
+    <!-- Không dùng ActionBar mặc định: Header được tự thiết kế trong layout XML. -->
+    <style name="Theme.KiemTra" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#1565C0</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="android:statusBarColor">#0D47A1</item>
+    </style>
+</resources>
